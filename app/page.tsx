@@ -1,6 +1,10 @@
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+
 export default function Home() {
   return (
     <main className="flex-1">
+      <Header />
       {/* Hero — full-bleed editorial */}
       <section className="relative min-h-[100svh] bg-[var(--color-accent)] overflow-hidden">
         {/* Skewed brand mark */}
@@ -122,22 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-[var(--color-background)] border-t border-[var(--color-border-light)] py-12 px-6 sm:px-12">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between gap-4 text-sm text-[var(--color-text-tertiary)]">
-          <p>© 2026 BAZA. Feito em Luanda, Angola.</p>
-          <div className="flex gap-6">
-            <a href="/legal/terms" className="hover:text-[var(--color-text-primary)]">
-              Termos
-            </a>
-            <a href="/legal/privacy" className="hover:text-[var(--color-text-primary)]">
-              Privacidade
-            </a>
-            <a href="/contact" className="hover:text-[var(--color-text-primary)]">
-              Contacto
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
