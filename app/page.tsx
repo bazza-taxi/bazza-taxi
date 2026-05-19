@@ -1,65 +1,143 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="flex-1">
+      {/* Hero — full-bleed editorial */}
+      <section className="relative min-h-[100svh] bg-[var(--color-accent)] overflow-hidden">
+        {/* Skewed brand mark */}
+        <div className="absolute top-12 right-8 sm:top-16 sm:right-16 -rotate-6">
+          <div className="bg-[var(--color-text-primary)] w-28 h-28 sm:w-44 sm:h-44 flex items-center justify-center">
+            <span className="rotate-6 text-[var(--color-accent)] font-bold text-7xl sm:text-[10rem] leading-none -tracking-[0.04em]">
+              B
+            </span>
+          </div>
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 pt-32 sm:pt-48 pb-20">
+          <p className="text-[11px] font-medium tracking-[0.18em] uppercase opacity-75 text-[var(--color-text-primary)]">
+            Moto-táxi · Luanda
           </p>
+
+          <h1 className="mt-3 max-w-3xl text-[clamp(2.75rem,8vw,6.5rem)] font-bold leading-[0.95] -tracking-[0.03em] text-[var(--color-text-primary)]">
+            Sai daqui, ali e além.
+            <br />
+            Em segundos.
+          </h1>
+
+          <p className="mt-6 max-w-xl text-lg sm:text-xl leading-[1.45] text-[var(--color-text-primary)]/85">
+            BAZA é a moto-táxi de Luanda. Preços justos para si e
+            para o motorista, pagamento em dinheiro ou transferência,
+            cobertura em toda a cidade.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <a
+              href="#download"
+              className="inline-flex items-center justify-center h-14 px-8 rounded-[var(--radius-lg)] bg-[var(--color-text-primary)] text-[var(--color-accent)] font-semibold text-base transition hover:bg-[var(--color-text-primary)]/90"
+            >
+              Descarregar a app
+            </a>
+            <a
+              href="/drivers"
+              className="inline-flex items-center justify-center h-14 px-8 rounded-[var(--radius-lg)] border-[1.5px] border-[var(--color-text-primary)] text-[var(--color-text-primary)] font-semibold text-base transition hover:bg-[var(--color-text-primary)]/5"
+            >
+              Quero ser motorista
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        {/* Bottom ink stripe (signature pattern) */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-[var(--color-text-primary)]" />
+      </section>
+
+      {/* Value props */}
+      <section className="bg-[var(--color-background)] py-24 sm:py-32 px-6 sm:px-12">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[var(--color-text-tertiary)]">
+            Como funciona
+          </p>
+          <h2 className="mt-3 text-4xl sm:text-5xl font-bold -tracking-[0.02em] max-w-2xl text-[var(--color-text-primary)]">
+            Pedir uma BAZA é simples.
+          </h2>
+
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              {
+                n: "01",
+                title: "Diga onde vai",
+                body: "Toque no destino no mapa ou pesquise pelo nome. Vemos o preço antes de pedir.",
+              },
+              {
+                n: "02",
+                title: "Aceitamos em segundos",
+                body: "O motorista mais próximo apanha o pedido. Vê a moto a aproximar-se no mapa, em tempo real.",
+              },
+              {
+                n: "03",
+                title: "Paga como quiser",
+                body: "Dinheiro no fim da viagem ou transferência IBAN com o número do motorista. Sem app de pagamentos.",
+              },
+            ].map((step) => (
+              <article
+                key={step.n}
+                className="bg-[var(--color-surface)] rounded-[var(--radius-xl)] p-8 border border-[var(--color-border-light)]"
+              >
+                <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[var(--color-text-tertiary)]">
+                  {step.n}
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold -tracking-[0.01em] text-[var(--color-text-primary)]">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-base leading-[1.55] text-[var(--color-text-secondary)]">
+                  {step.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Driver recruitment band */}
+      <section className="bg-[var(--color-text-primary)] py-24 px-6 sm:px-12">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8">
+          <div>
+            <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[var(--color-accent)] opacity-90">
+              Motoristas
+            </p>
+            <h2 className="mt-3 text-4xl sm:text-6xl font-bold -tracking-[0.03em] text-white max-w-2xl">
+              Tem moto?
+              <br />
+              Tem trabalho.
+            </h2>
+            <p className="mt-5 max-w-lg text-lg leading-[1.5] text-white/70">
+              Ganhe dinheiro nos seus horários. Sem mensalidade. Recebe
+              direto na sua conta todas as sextas-feiras.
+            </p>
+          </div>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/drivers"
+            className="inline-flex items-center justify-center h-14 px-8 rounded-[var(--radius-lg)] bg-[var(--color-accent)] text-[var(--color-text-primary)] font-semibold text-base transition hover:bg-[var(--color-accent-pressed)]"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Saber mais
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <footer className="bg-[var(--color-background)] border-t border-[var(--color-border-light)] py-12 px-6 sm:px-12">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between gap-4 text-sm text-[var(--color-text-tertiary)]">
+          <p>© 2026 BAZA. Feito em Luanda, Angola.</p>
+          <div className="flex gap-6">
+            <a href="/legal/terms" className="hover:text-[var(--color-text-primary)]">
+              Termos
+            </a>
+            <a href="/legal/privacy" className="hover:text-[var(--color-text-primary)]">
+              Privacidade
+            </a>
+            <a href="/contact" className="hover:text-[var(--color-text-primary)]">
+              Contacto
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
