@@ -44,7 +44,7 @@ export default function Home() {
 
             <div className="mt-9 flex flex-col sm:flex-row gap-3">
               <Link
-                href="#download"
+                href="/download"
                 className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-full bg-[var(--color-ink)] text-white font-semibold text-base shadow-lg shadow-[var(--color-ink)]/10 hover:translate-y-[-1px] transition"
               >
                 <PlayStoreGlyph />
@@ -323,18 +323,17 @@ export default function Home() {
 
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="https://github.com/bazza-taxi/bazza-taxi/releases"
+              href="/download"
               className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-full bg-[var(--color-ink)] text-white font-semibold text-base hover:translate-y-[-1px] transition"
             >
               <PlayStoreGlyph />
-              App passageiro
+              Ver opções de descarga
             </Link>
             <Link
-              href="https://github.com/bazza-taxi/bazza-taxi/releases"
+              href="/drivers"
               className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-full border-[1.5px] border-[var(--color-ink)] text-[var(--color-ink)] font-semibold text-base hover:bg-[var(--color-ink)]/5 transition"
             >
-              <PlayStoreGlyph />
-              App motorista
+              Quero ser motorista →
             </Link>
           </div>
         </div>

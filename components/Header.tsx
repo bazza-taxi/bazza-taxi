@@ -73,7 +73,7 @@ export function Header({ mode = "light" }: { mode?: Mode }) {
         </div>
 
         <Link
-          href="#download"
+          href="/download"
           className={`inline-flex items-center justify-center h-10 sm:h-11 px-5 rounded-full text-[13px] sm:text-sm font-semibold transition ${
             isDark
               ? "bg-[var(--color-accent)] text-[var(--color-ink)] hover:bg-[var(--color-accent-pressed)]"

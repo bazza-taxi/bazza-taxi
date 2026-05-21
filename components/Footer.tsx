@@ -7,8 +7,8 @@ export function Footer() {
       links: [
         { href: "/how-it-works", text: "Como funciona" },
         { href: "/cities", text: "Cidades" },
-        { href: "/#pricing", text: "Preços" },
-        { href: "/#safety", text: "Segurança" },
+        { href: "/pricing", text: "Preços" },
+        { href: "/safety", text: "Segurança" },
       ],
     },
     {
@@ -27,7 +27,7 @@ export function Footer() {
       label: "Empresa",
       links: [
         { href: "/about", text: "Sobre a BAZA" },
-        { href: "/about#press", text: "Imprensa" },
+        { href: "/download", text: "Descarregar" },
         {
           href: "https://wa.me/244946124639?text=Ol%C3%A1%20BAZA",
           text: "Contacto",
@@ -59,7 +59,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 md:justify-end">
             <Link
-              href="#download"
+              href="/download"
               className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[var(--color-accent)] text-[var(--color-ink)] font-semibold text-sm hover:bg-[var(--color-accent-pressed)] transition"
             >
               Descarregar para Android

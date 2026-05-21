@@ -86,7 +86,7 @@ export default function HowItWorks() {
           </h2>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Link
-              href="/#download"
+              href="/download"
               className="inline-flex items-center justify-center h-13 px-7 py-3.5 rounded-full bg-[var(--color-ink)] text-white font-semibold text-base hover:translate-y-[-1px] transition"
             >
               Descarregar a app
