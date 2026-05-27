@@ -35,7 +35,7 @@ export default function Download() {
             kind="Passageiro"
             title="App BAZA"
             description="Para quem precisa de uma moto-táxi. Pede no mapa, vê o preço antes, paga em kwanzas."
-            primaryHref="https://github.com/bazza-taxi/bazza-taxi/releases/latest/download/baza-passenger.apk"
+            primaryHref="https://github.com/bazza-taxi/bazza-taxi/releases/latest/download/baza.apk"
             primaryLabel="Descarregar APK"
             releasesHref="https://github.com/bazza-taxi/bazza-taxi/releases"
             accent
@@ -44,7 +44,7 @@ export default function Download() {
             kind="Motorista"
             title="App BAZA Motorista"
             description="Para quem tem moto e quer fazer dinheiro. Vai online, recebe pedidos, paga-se à sexta."
-            primaryHref="https://github.com/bazza-taxi/bazza-taxi/releases/latest/download/baza-driver.apk"
+            primaryHref="https://github.com/bazza-taxi/bazza-taxi/releases/latest/download/baza.apk"
             primaryLabel="Descarregar APK"
             releasesHref="https://github.com/bazza-taxi/bazza-taxi/releases"
           />
@@ -63,7 +63,7 @@ export default function Download() {
             {[
               {
                 t: "Descarregue o APK",
-                b: "Toque no botão acima. O ficheiro chama-se baza-passenger.apk (ou baza-driver.apk).",
+                b: "Toque no botão acima. O ficheiro chama-se baza.apk.",
               },
               {
                 t: "Permita instalação por fontes externas",
